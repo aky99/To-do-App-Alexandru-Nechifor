@@ -3,6 +3,7 @@ import './App.css';
 // Importing components
 import Form from './components/Form';
 import TodoList from './components/TodoList';
+import ClearBtn from './components/ClearBtn';
 
 function App() {
   // State stuff
@@ -53,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Todo List App by Alexandru</h1>
+        <h1>To-do List App by Alexandru</h1>
       </header>
       <Form
         inputText={inputText}
@@ -67,6 +68,8 @@ function App() {
         todos={todos}
         filteredTodos={filteredTodos}
       />
+
+      <ClearBtn setTodos={setTodos} />
     </div>
   );
 }
